@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Volume</title>
+
+    <script>
+
+        function volumeConversion() {
+            let q = parseFloat(document.getElementById('quartsInput').value);
+
+            let l = q * 0.946353;
+
+            let digits = 2;
+            let multiplier = Math.pow(10, digits);
+            l = Math.round(l * multiplier) / multiplier;
+
+            document.getElementById('outputDiv').innerHTML = l;
+        }
+    </script>
+</head>
+
+<body>
+    Volume in Quarts <input type="text" id="quartsInput" size="5"><br>
+    <button type="button" onclick="volumeConversion()">Volume in Liters</button>
+    <div id="outputDiv"></div>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Rate of Change</title>
+
+    <script>
+
+        function rateOfChange() {
+            let x = parseFloat(document.getElementById('currPrice').value);
+            let y = parseFloat(document.getElementById('prevPrice').value);
+            
+            let roc = (x - y) / y;
+
+            document.getElementById('outputDiv').innerhtml = roc;
+
+        }
+
+    </script>
+</head>
+
+<body>
+    Current Price <input type="text" id="currPrice" size="5"><br>
+    Previous Price <input type="text" id="prevPrice" size="5"><br>
+    <button type="button" onclick="rateOfChange()"> Rate of Change </button>
+
+    <div id="outputDiv"></div>
+
+</body>
+
+</html>
