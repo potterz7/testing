@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <title>Exponents of 2</title>
+    <script>
+        function exponentsOfTwo() {
+             var display = "";  
+             for (i = 0; i <= 31; i++) {
+                 var multiplier = 2;
+                 var result = Math.pow( 2, i);
+                 display += Math.pow(2, i) +" = "+result+"<br>"+"<br>";
+             }  
+        document.getElementById("outputDiv").innerHTML = display;
+        }  
+    </script>
+</head>
+<body>
+    <h2>Exponentsof 2</h2>
+    <h3>Display exponents of 2 results</h3>
+    <button type="button" onclick="exponentsOfTwo()">Exponents</button>
+    <div id="outputDiv"></div>
+</body>
+</html>

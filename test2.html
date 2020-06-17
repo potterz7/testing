@@ -3,28 +3,33 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Volume</title>
+    <title>Odd Repetition</title>
 
     <script>
+        function sumOfOdds(n) {
+            var n = parseInt(document.getElementById('box').value);
+            var i
+            var sum
 
-        function milesPerGallon() {
-            let s = parseFloat(document.getElementById('startInput').value);
-            let e = parseFloat(document.getElementById('endInput').value);
-            let g = parseFloat(document.getElementById('gasInput').value);
-
-            let mpg = (e - s) / g;
-
-            document.getElementById('outputDiv').innerHTML = mpg;
+            for (let i = 1; i <= n; i += 2) {
+                sum += i
+            }
         }
+
+        document.getElementById('outputdiv').innerHTML = sum;
     </script>
 </head>
 
 <body>
-    Starting Odometer <input type="text" id="startInput" size="5"><br>
-    Ending Odometer <input type="text" id="endInput" size="5"><br>
-    Gas Used in Gallons <input type="text" id="gasInput" size="5"><br>
-    <button type="button" onclick="milesPerGallon()">Miles Per Gallon</button>
-    <div id="outputDiv"></div>
+
+    <h1>Enter an Integer!</h1>
+
+
+
+    <input type="text" id="box" size="3" value="0"><br>
+
+    <button type="button" onclick="sumOfOdds()">Go!</button>
+    <div id="outputdiv"></div>
 </body>
 
 </html>

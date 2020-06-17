@@ -1,32 +1,24 @@
 <!DOCTYPE HTML>
 <html lang="en-us">
-
 <head>
     <meta charset="utf-8">
-    <title>Rate of Change</title>
-
+    <title>Five's Multiplication Table</title>
     <script>
-
-        function rateOfChange() {
-            let x = parseFloat(document.getElementById('currPrice').value);
-            let y = parseFloat(document.getElementById('prevPrice').value);
-            
-            let roc = (x - y) / y;
-
-            document.getElementById('outputDiv').innerhtml = roc;
-
-        }
-
+        function FiveTimesTable() {
+             var display = "";  
+             for (i = 1; i <= 12; i++) {
+                 var multiplier = 5;
+                 var result = i*5;
+                 display += multiplier+" * "+i+" = "+result+"<br>"+"<br>";
+             }  
+        document.getElementById("outputDiv").innerHTML = display;
+        }  
     </script>
 </head>
-
 <body>
-    Current Price <input type="text" id="currPrice" size="5"><br>
-    Previous Price <input type="text" id="prevPrice" size="5"><br>
-    <button type="button" onclick="rateOfChange()"> Rate of Change </button>
-
+    <h2>Five's Multiplication Table</h2>
+    <h3>Display the 5 times table</h3>
+    <button type="button" onclick="FiveTimesTable()">Times Table</button>
     <div id="outputDiv"></div>
-
 </body>
-
 </html>

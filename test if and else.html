@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Discounts</title>
+
+    <script>
+
+        function getTotal() {
+            var dayOfWeek = new Date().getDay();
+            var subtotal = parseFloat(document.getElementById("subtotal").value);
+            var tax = .06;
+            var totalAfterTax;
+
+            if (subtotal > 50 && (dayOfWeek == 2 || dayOfWeek == 3)) {
+                subtotal *= 1 - .10;
+                totalAfterTax = subtotal + (subtotal * tax);
+            }
+            else {
+                totalAfterTax = subtotal + (subtotal * tax);
+
+            }
+
+
+            document.getElementById("output").innerHTML = totalAfterTax;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Let's see if you get your discount.</h1>
+    <p>Please enter your subtotal:</p>
+    <input type="text" id="subtotal" size="5">
+
+    <br>
+
+    <button type="button" onclick="getTotal()">Check</button>
+
+    <div id="output"></div>
+
+</body>
+
+</html>
