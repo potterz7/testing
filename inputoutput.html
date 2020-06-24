@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Is Even</title>
+
+<script>
+/* Input: An integer
+ * Processing: Determine if the integer is even or not
+ * Output: A message stating if the integer is even or not
+ */
+function doInputOutput() {
+    let temperature = parseInt(document.getElementById('temperatureBox').value);
+    let windspeed = parseInt(document.getElementById('windspeedBox').value);
+
+}
+function windChill() {
+    let windchill= f;
+    let temperature= t;
+    let windspeed= s;
+    f = 35.74 + 0.6215 (t) - 35.75 * math.pow(s,0.16) + 0.4275*t* math.pow(s,0.16);
+
+
+}
+document.getElementById('outputDiv').innerHTML = f;
+
+</script>
+</head>
+<body>                               
+Temperature: <input type="text" id="temperatureBox">
+Windspeed: <input type="text" id="windspeedBox">             
+<button type="button" onclick="doInputOutput()">WindChill</button>
+<div id="outputDiv"></div>
+</body>         
+</html>

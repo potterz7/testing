@@ -1,58 +1,31 @@
 <!DOCTYPE HTML>
-<html lang = "en-us">
+<html lang="en-us">
 <head>
-<meta charset = "utf-8">
-<title>Sleepy Time</title>
-
-</head>
-
-<body>
-<h1>Can we sleep in today?</h1>
-<br>
+<meta charset="utf-8">
+<title>Five times table</title>
 
 <script>
 
-function timeForSleep(){
+function Power() {
+    
+    let count = parseInt(document.getElementById("Number").value);
+    
+    for ( ;  count <=31; count++) {
+    
+        empowerment= 2^count; 
 
-//defining variables
-var now = new Date();
-var month = now.getMonth();
-var dayOfMonth = now.getDate();
-var dayOfWeek = now.getDay();
-let sleepTime;
+     
 
-//if statements
+     
 
-if ((month == 0 && dayOfMonth == 1) || (month == 6 && dayOfMonth == 4) || (month == 11 && dayOfMonth == 25)) {
-sleepTime = "You can sleep in today, awesome!";
-
-}else if (5 > dayOfWeek || dayOfWeek > 1){
-
-sleepTime = "I am afraid you will have to get up today.";
-}else {
-sleepTime = "You can sleep in today, awesome!";
+    document.getElementById('output').innerHTML =empowerment;}
 }
-// pulling the info for the user to read
-document.getElementById("timeForSleep").innerHTML = sleepTime;
-}
-
- 
-
- 
-
 </script>
+</head>
 
-
-<button type = "button" onclick="timeForSleep()">Lets check if you can sleep in!:</button>
-
-</br>
-</br>
-
-
-<div id = "timeForSleep"></div>
-</body>
-
- 
-
-
+<body>                                         
+Enter a number from 0 to 31:<input type="text" id="Number">
+<button type="button" onclick="Power()">SUM</button>
+<div id="output"></div>                
+</body>       
 </html>
